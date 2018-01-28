@@ -1,0 +1,16 @@
+---
+
+- name: install key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+  when: ansible_pkg_mgr == 'apt'
+
+- name: install repository
+  apt_repository:
+    repo: "deb http://packages.cloud.google.com/apt cloud-sdk-{{ ansible_distribution_release }} main"
+  when: ansible_pkg_mgr == 'apt'
+
+- name: install packages
+  apt:
+    pkg: google-cloud-sdk
+  when: ansible_pkg_mgr == 'apt'

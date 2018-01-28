@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Denis Khabarov
+  description: "Install the Google Cloud SDK. Currently this role support only Debian-stable and Ubuntu release that has not reached end-of-life."
+  license: GPLv3
+  min_ansible_version: 1.4
+  platforms:
+  - name: Ubuntu
+  - name: Debian
+  categories:
+  - development
+dependencies: []
